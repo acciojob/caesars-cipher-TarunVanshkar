@@ -17,7 +17,7 @@ function rot13(encodedStr){
 		{
 			let charCode=encodedStr.charCodeAt(i);
 			let updatedCharCode=(charCode+13)%26;
-			decodedArr.push(string.fromCharCode(updatedCharCode));
+			decodedArr.push(String.fromCharCode(updatedCharCode));
 		}
   return decodedArr;
 }
