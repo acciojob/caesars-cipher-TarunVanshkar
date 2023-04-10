@@ -15,9 +15,13 @@ function rot13(encodedStr){
   // Only change code below this line
 	for(let i=0; i<encodedStr.length; i++)
 		{
-			let charCode=encodedStr.charCodeAt(i)-65;   //-65 for capital letters and -97 for small letters
-			let updatedCharCode=(charCode+13)%26;
-			decodedArr.push(String.fromCharCode(updatedCharCode+65));
+			let char=encodedStr[i];
+			if(char.mach(/[A-Z]/))
+				{
+					let charCode=encodedStr.charCodeAt(i)-65;   //-65 for capital letters and -97 for small letters
+					let updatedCharCode=(charCode+13)%26;
+					decodedArr.push(String.fromCharCode(updatedCharCode+65));
+				}
 		}
   return decodedArr;
 }
