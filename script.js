@@ -16,7 +16,7 @@ function rot13(encodedStr){
 	for(let i=0; i<encodedStr.length; i++)
 		{
 			let char=encodedStr[i];
-			if(char.mach(/[A-Z]/))
+			if(char.match(/[A-Z]/))
 				{
 					let charCode=encodedStr.charCodeAt(i)-65;   //-65 for capital letters and -97 for small letters
 					let updatedCharCode=(charCode+13)%26;
