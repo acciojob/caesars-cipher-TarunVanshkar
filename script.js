@@ -16,7 +16,15 @@ function rot13(encodedStr){
 	for(let i=0; i<encodedStr.length; i++)
 		{
 			let char=encodedStr[i];
-			decodedArr.push(lookup[char]);
+			let updatedChar=lookup[char];
+			if(updatedChar==undefined)
+			{
+			    decodedArr.push(' ');
+			}
+			else
+			{
+			    decodedArr.push(updatedChar);
+			}
 		}
   return decodedArr.join('');
 }
